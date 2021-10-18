@@ -1,5 +1,14 @@
  <?php
 
+/**
+ * Monocrea Class
+ * TPhp class that output a character drawing. It loads random SVG files from 3 directories, 
+ * each one containig parts of the character body to be created. Heads, Body and Legs.
+ * @author Jean Paul Delaye 
+ */
+
+
+
 class monocrea  {
 	
   public $monocrea="";
@@ -29,25 +38,25 @@ class monocrea  {
    		   }
    
 		    closedir($handle);
-   		  $fileNames = array_reverse($fileNames);
+   		    $fileNames = array_reverse($fileNames);
 		   
 	 }else {
  		    return "<p>There is an directory read issue</p>";
 		    exit;
 	 }
 	  
-		 return $dir.$fileNames[rand(0, count($fileNames)-1)];
+		    return $dir.$fileNames[rand(0, count($fileNames)-1)];
 	 
   }
 	
   function __destruct() { 
 	  
-    $cabeza =  self::get_mono("cabeza");
+          $cabeza =  self::get_mono("cabeza");
 	  $cuerpo =  self::get_mono("cuerpo");
 	  $piernas =  self::get_mono("piernas");
 
 	  $mono_cabeza_svg  = '<svg  height="300" width="300" transform="translate(300,0) scale(1)" >'.file_get_contents( $cabeza ).'</svg>';
-    $mono_cuerpo_svg  = '<svg  height="300" width="300" transform="translate(300,300) scale(1)" >'.file_get_contents( $cuerpo ).'</svg>';
+          $mono_cuerpo_svg  = '<svg  height="300" width="300" transform="translate(300,300) scale(1)" >'.file_get_contents( $cuerpo ).'</svg>';
 	  $mono_piernas_svg = '<svg height="300" width="300" transform="translate(300,600) scale(1)" >'.file_get_contents( $piernas ).'</svg>';
 	  
 	  
