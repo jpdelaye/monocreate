@@ -5,7 +5,7 @@ Heads, Body and Legs
 Requirements:
 php >= 5.4.0
 
-Intallation:
+Installation:
 just copy the class to your classes folder
 
 Basic Usage: 
