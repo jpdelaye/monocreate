@@ -12,6 +12,6 @@ Basic Usage:
 $artwork = new monocrea();
 
 
-sample: https://intelector.com/monocrea/
+sample: https://intelector.com/?p=420
 
 NOTE: each time the page loads it render a different character.
